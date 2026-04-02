@@ -4,6 +4,11 @@ export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
+  safelist: [
+    { pattern: /bg-\[hsl\(var\(--genre-.*\)\)\]/ },
+    { pattern: /text-\[hsl\(var\(--genre-.*\)\)\]/ },
+    { pattern: /border-\[hsl\(var\(--genre-.*\)\)\]/ },
+  ],
   theme: {
     container: {
       center: true,
